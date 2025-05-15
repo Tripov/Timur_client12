@@ -1,0 +1,102 @@
+/* Общие стили для секции */
+.apply-doctor-section {
+  width: 100%;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #e0f7fa, #ffffff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.apply-doctor-container {
+  background: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 3rem;
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* Расстояние между элементами */
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Заголовок и подзаголовок */
+.form-heading {
+  font-size: 2rem;
+  color: #00796b;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.form-subheading {
+  font-size: 1rem;
+  color: #616161;
+}
+
+/* Поля формы */
+.form-input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #b2dfdb;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #424242;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #00796b;
+  box-shadow: 0 0 8px rgba(0, 121, 107, 0.3);
+}
+
+/* Кнопка отправки */
+.form-btn {
+  background: #00796b;
+  color: #ffffff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.form-btn:hover {
+  background: #004d40;
+  transform: scale(1.05);
+}
+
+.form-btn:active {
+  transform: scale(0.95);
+}
+
+/* Мобильная адаптация */
+@media (max-width: 600px) {
+  .apply-doctor-container {
+    padding: 2rem;
+  }
+
+  .form-heading {
+    font-size: 1.5rem;
+  }
+
+  .form-input {
+    font-size: 0.9rem;
+  }
+}

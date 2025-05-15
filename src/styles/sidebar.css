@@ -1,0 +1,160 @@
+/* sidebar.css */
+
+/* Общие переменные */
+:root {
+  --dark-green: #7ddd7d;
+  --text-color: #333333;
+}
+
+.logout-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.logout-button:hover {
+  background-color: #c0392b;
+}
+
+/* Стили боковой панели */
+.sidebar-section {
+  background: blue;
+  width: 18vw;
+  height: 100vh;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  color: var(--whie);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar-container {
+  background-color: rgb(22, 134, 185);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sidebar-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-container ul > li {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar-container a {
+  color: #000;
+  text-decoration: none;
+  display: block;
+}
+
+.sidebar-container a:hover {
+  background-color: var(--light-green);
+  color: var(--dark-green);
+}
+
+.sidebar-container .active {
+  background-color: var(--light-green);
+  color: var(--dark-green);
+}
+
+/* Основной контент */
+.layout-section {
+  display: flex;
+  flex-direction: row;
+}
+
+.layout-container {
+  display: flex;
+  width: 100%;
+}
+
+.content-area {
+  flex: 1;
+  padding: 20px;
+  background-color: var(--light-green);
+  color: var(--text-color);
+  min-height: 100vh;
+}
+
+.content-area h1,
+.content-area h2,
+.content-area p {
+  margin: 0 0 20px;
+}
+
+/* Мобильная адаптивность */
+@media (max-width: 1126px) {
+  .sidebar-section {
+    width: 22vw;
+  }
+}
+
+@media (max-width: 875px) {
+  .sidebar-section {
+    width: 25vw;
+  }
+}
+
+@media (max-width: 700px) {
+  .sidebar-section {
+    width: 30vw;
+  }
+}
+
+@media (max-width: 537px) {
+  .sidebar-section {
+    width: 40vw;
+  }
+}
+
+
+
+@media (max-width: 426px) {
+  .sidebar-section {
+    width: 45vw;
+  }
+}
+
+.logout-button {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  z-index: 1000; /* Чтобы кнопка была поверх других элементов */
+}
+
+.logout-button:hover {
+  background-color: #c0392b;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 700px) {
+  .logout-button {
+    top: 15px;
+    right: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+}
